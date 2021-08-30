@@ -46,22 +46,22 @@ function renderLicenseSection(license) {
 function tableOfContentsGenerator(data) {
   var tableOfContents = "## Table of contents"
   if (data.projDesc !== '') {
-    tableOfContents += "\r\n ![Description](## Description)"
+    tableOfContents += "\r\n[Description](./#description)"
   }
   if (data.projInst !== '') {
-    tableOfContents += "\r\n ![Installation Instructions](## Installation Instructions)"
+    tableOfContents += "\r\n[Installation Instructions](./#installation-instructions)"
   }
   if (data.projUsag !== '') {
-    tableOfContents += "\r\n ![Usage Instructions](## Usage Instructions)"
+    tableOfContents += "\r\n[Usage Instructions](./#usage-instructions)"
   }
   if (data.projGuides !== '') {
-    tableOfContents += "\r\n ![Contribution Guidelines](## Contribution Guidelines)"
+    tableOfContents += "\r\n[Contribution Guidelines](./#contribution-guidelines)"
   }
   if (data.projTest !== '') {
-    tableOfContents += "\r\n ![Testing Instructions](## Testing Instructions)"
+    tableOfContents += "\r\n[Testing Instructions](./#testing-instructions)"
   }
   if (data.projLicense !== 'None') {
-    tableOfContents += "\r\n ![License](## License)"
+    tableOfContents += "\r\n[License](./#license)"
   }
   return tableOfContents;
 }
