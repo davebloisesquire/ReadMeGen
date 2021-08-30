@@ -3,31 +3,31 @@
 ## Table of contents
 [Description](##Description)
 
-[Installation Instructions](##Installation%20Instructions)
+[Installation Instructions](#Installation%20Instructions)
 
-[Usage Instructions](##Usage%20Instructions)
+[Usage Instructions](#Usage%20Instructions)
 
-[Contribution Guidelines](##Contribution%20Guidelines)
+[Contribution Guidelines](#Contribution%20Guidelines)
 
-[Testing Instructions](##Testing%20Instructions)
+[Testing Instructions](#Testing%20Instructions)
 
-[License](##License)
+[License](#License)
 
-## Description
+# Description <a name="Description"></a>
 sadf
 
-## Installation Instructions
+# Installation Instructions
 asdf
 
-## Usage Instructions
+# Usage Instructions
 asdf
 
-## Contribution Guidelines
+# Contribution Guidelines
 sdf
 
-## Testing Instructions
+# Testing Instructions
 sadf
 
-## License
+# License
     This project is licensed under Apache 2.0. For more information on this license follow the link below.
     https://opensource.org/licenses/Apache-2.0
