@@ -34,8 +34,8 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if (license !== 'None') {
     const licenseSection = `## License
-    This project is licensed under ${license}. For more information on this license follow the link below.
-    ${renderLicenseLink(license)}
+This project is licensed under ${license}. For more information on this license follow the link below.
+${renderLicenseLink(license)}
     `;
     return licenseSection;
   } else {
@@ -46,22 +46,22 @@ function renderLicenseSection(license) {
 function tableOfContentsGenerator(data) {
   var tableOfContents = "## Table of contents"
   if (data.projDesc !== '') {
-    tableOfContents += "\r\n[Description](./#description)"
+    tableOfContents += "\r\n\r\n [Description](./#description)"
   }
   if (data.projInst !== '') {
-    tableOfContents += "\r\n[Installation Instructions](./#installation-instructions)"
+    tableOfContents += "\r\n\r\n [Installation Instructions](./#installation-instructions)"
   }
   if (data.projUsag !== '') {
-    tableOfContents += "\r\n[Usage Instructions](./#usage-instructions)"
+    tableOfContents += "\r\n\r\n [Usage Instructions](./#usage-instructions)"
   }
   if (data.projGuides !== '') {
-    tableOfContents += "\r\n[Contribution Guidelines](./#contribution-guidelines)"
+    tableOfContents += "\r\n\r\n [Contribution Guidelines](./#contribution-guidelines)"
   }
   if (data.projTest !== '') {
-    tableOfContents += "\r\n[Testing Instructions](./#testing-instructions)"
+    tableOfContents += "\r\n\r\n [Testing Instructions](./#testing-instructions)"
   }
   if (data.projLicense !== 'None') {
-    tableOfContents += "\r\n[License](./#license)"
+    tableOfContents += "\r\n\r\n [License](./#license)"
   }
   return tableOfContents;
 }
@@ -111,7 +111,8 @@ ${data.projGuides}
 
   //Generate testing instructions
   if (data.projTest !== '') {
-    renderTest = `## Testing Instructions
+    renderTest = `
+## Testing Instructions
 ${data.projTest}
 `
   } else {
