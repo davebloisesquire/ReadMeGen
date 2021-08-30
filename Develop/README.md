@@ -1,17 +1,17 @@
 # asdf
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ## Table of contents
-[Description](##Description)
+[Description](./#Description)
 
-[Installation Instructions](#Installation%20Instructions)
+[Installation Instructions](./#Installation%20Instructions)
 
-[Usage Instructions](#Usage%20Instructions)
+[Usage Instructions](./#Usage%20Instructions)
 
-[Contribution Guidelines](#Contribution%20Guidelines)
+[Contribution Guidelines](./#Contribution%20Guidelines)
 
-[Testing Instructions](#Testing%20Instructions)
+[Testing Instructions](./#Testing%20Instructions)
 
-[License](#License)
+[License](./#License)
 
 # Description <a name="Description"></a>
 sadf
