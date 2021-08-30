@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   const badges = {
-    "None": ""
+    "None": "",
     "Apache 2.0": "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
     "Boost SL 1.0": "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)",
     "BSD 3": "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)",
@@ -16,26 +16,120 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
-const licenseLink = {
-  "None": ""
-  "Apache 2.0": "(https://opensource.org/licenses/Apache-2.0)",
-  "Boost SL 1.0": "(https://www.boost.org/LICENSE_1_0.txt)",
-  "BSD 3": "(https://opensource.org/licenses/BSD-3-Clause)",
-  "CC0": "(http://creativecommons.org/publicdomain/zero/1.0/)",
-  "Eclipse": "(https://opensource.org/licenses/EPL-1.0)",
-  "GNU": "(https://www.gnu.org/licenses/gpl-3.0)",
-  "MIT": "(https://opensource.org/licenses/MIT)",
+function renderLicenseLink(license) {
+  const licenseLink = {
+    "None": "",
+    "Apache 2.0": "https://opensource.org/licenses/Apache-2.0",
+    "Boost SL 1.0": "https://www.boost.org/LICENSE_1_0.txt",
+    "BSD 3": "https://opensource.org/licenses/BSD-3-Clause",
+    "CC0": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "Eclipse": "https://opensource.org/licenses/EPL-1.0",
+    "GNU": "https://www.gnu.org/licenses/gpl-3.0",
+    "MIT": "https://opensource.org/licenses/MIT",
+  }
+  return licenseLink[license];
 }
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license !== 'None') {
+    const licenseSection = `## License
+    This project is licensed under ${license}. For more information on this license follow the link below.
+    ${renderLicenseLink(license)}
+    `;
+    return licenseSection;
+  } else {
+    return '';
+  }
+}
+
+function tableOfContentsGenerator(data) {
+  var tableOfContents = "## Table of contents"
+  if (data.projDesc !== '') {
+    tableOfContents += "\r\n ![Description](## Description)"
+  }
+  if (data.projInst !== '') {
+    tableOfContents += "\r\n ![Installation Instructions](## Installation Instructions)"
+  }
+  if (data.projUsag !== '') {
+    tableOfContents += "\r\n ![Usage Instructions](## Usage Instructions)"
+  }
+  if (data.projGuides !== '') {
+    tableOfContents += "\r\n ![Contribution Guidelines](## Contribution Guidelines)"
+  }
+  if (data.projTest !== '') {
+    tableOfContents += "\r\n ![Testing Instructions](## Testing Instructions)"
+  }
+  if (data.projLicense !== 'None') {
+    tableOfContents += "\r\n ![License](## License)"
+  }
+  return tableOfContents;
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  var renderDesc;
+  var renderInst;
+  var renderUsag;
+  var renderTest;
+  var renderGuides;
+  //Generate description
+  if (data.projDesc !== '') {
+    renderDesc = `## Description
+${data.projDesc}
+`
+  } else {
+    renderDesc = ''
+  };
 
+  //Generate instructions
+  if (data.projInst !== '') {
+    renderInst = `## Installation Instructions
+${data.projInst}
+`
+  } else {
+    renderInst = ''
+  };
+
+  //Generate usage
+  if (data.projUsag !== '') {
+    renderUsag = `## Usage Instructions
+${data.projUsag}
+`
+  } else {
+    renderUsag = ''
+  };
+
+  //Generate Contribution Guidelines
+  if (data.projGuides !== '') {
+    renderGuides = `## Contribution Guidelines
+${data.projGuides}
+`
+  } else {
+    renderGuides = ''
+  };
+
+  //Generate testing instructions
+  if (data.projTest !== '') {
+    renderTest = `## Testing Instructions
+${data.projTest}
+`
+  } else {
+    renderTest = ''
+  };
+
+
+  return `# ${data.projTitle}
+${renderLicenseBadge(data.projLicense)}
+${tableOfContentsGenerator(data)}
+${renderDesc}
+${renderInst}
+${renderUsag}
+${renderGuides}
+${renderTest}
+${renderLicenseSection(data.projLicense)}
 `;
 }
+
 
 module.exports = generateMarkdown;
