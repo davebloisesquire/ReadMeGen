@@ -1,10 +1,10 @@
-// TODO: Include packages needed for this application
+// Package imports
 const inq = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 const gen = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
+// List of question prompts to generate the ReadMe markDown
 const questions = [
   {
     type: 'input',
@@ -59,7 +59,7 @@ const questions = [
   },
 ];
 
-// TODO: Create a function to write README file
+// Saves the readme markdown string to an md file
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, err => {
     if (err) {
@@ -70,7 +70,7 @@ function writeToFile(fileName, data) {
   })
 }
 
-// TODO: Create a function to initialize app
+// App initialization
 function init() {
   inq.prompt(questions)
   .then(responses => {

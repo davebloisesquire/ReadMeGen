@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Renders the license badge
 function renderLicenseBadge(license) {
   const badges = {
     "None": "",
@@ -14,8 +13,7 @@ function renderLicenseBadge(license) {
   return badges[license];
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Renders the license link
 function renderLicenseLink(license) {
   const licenseLink = {
     "None": "",
@@ -29,8 +27,8 @@ function renderLicenseLink(license) {
   }
   return licenseLink[license];
 }
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+
+//renders the license section
 function renderLicenseSection(license) {
   if (license !== 'None') {
     const licenseSection = `## License
@@ -43,6 +41,8 @@ ${renderLicenseLink(license)}
   }
 }
 
+// Renders the table of contents
+// I should clean this up at somepoint
 function tableOfContentsGenerator(data) {
   var tableOfContents = "## Table of contents"
   if (data.projDesc !== '') {
@@ -63,9 +63,13 @@ function tableOfContentsGenerator(data) {
   if (data.projLicense !== 'None') {
     tableOfContents += "\r\n\r\n [License](./#license)"
   }
+  if (!(data.name === '' && data.github === '' && data.email === '')) {
+    tableOfContents += "\r\n\r\n [Questions](./#questions)"
+  }
   return tableOfContents;
 }
 
+// Renders the questions contact section
 function questionsSection(name, github, email) {
   let renderName;
   let renderGithub;
@@ -82,9 +86,9 @@ function questionsSection(name, github, email) {
   }
   if ( !(name === '' && github === '' && email === '') )   {
     renderQuestionSection = `## Questions
-    ${renderName}
-    ${renderGithub}
-    ${renderEmail}
+${renderName}
+${renderGithub}
+${renderEmail}
     `
     console.log(renderQuestionSection);
   }
@@ -92,7 +96,7 @@ function questionsSection(name, github, email) {
   return renderQuestionSection;
 }
 
-// TODO: Create a function to generate markdown for README
+// Takes the elements and renders a markdown to save to file.
 function generateMarkdown(data) {
   var renderDesc;
   var renderInst;
@@ -144,9 +148,6 @@ ${data.projTest}
   } else {
     renderTest = ''
   };
-
-  //Generate Questions section
-
 
   return `# ${data.projTitle}
 ${renderLicenseBadge(data.projLicense)}
