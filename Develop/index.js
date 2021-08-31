@@ -37,6 +37,21 @@ const questions = [
     message: 'Project Testing Instructions?',
   },
   {
+    type: 'input',
+    name: 'projGit',
+    message: 'What\'s your GitHub account?',
+  },
+  {
+    type: 'input',
+    name: 'projEmail',
+    message: 'What is your email?',
+  },
+  {
+    type: 'input',
+    name: 'projYourName',
+    message: 'What\'s your name?',
+  },
+  {
     type: 'list',
     name: 'projLicense',
     choices: ['None', 'Apache 2.0', 'Boost SL 1.0', 'BSD 3', 'CC0', 'Eclipse', 'GNU', 'MIT'],

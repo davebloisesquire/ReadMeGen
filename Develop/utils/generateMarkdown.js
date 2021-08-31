@@ -66,6 +66,32 @@ function tableOfContentsGenerator(data) {
   return tableOfContents;
 }
 
+function questionsSection(name, github, email) {
+  let renderName;
+  let renderGithub;
+  let renderEmail;
+  let renderQuestionSection = '';
+  if (name !== '') {
+    renderName = `My name is ${name}.`
+  }
+  if (github !== '') {
+    renderGithub = `My github is [${github}](https://github.com/${github}).`
+  }
+  if (email !== '') {
+    renderEmail = `You can email me at [${email}](mailto:${email}).`
+  }
+  if ( !(name === '' && github === '' && email === '') )   {
+    renderQuestionSection = `## Questions
+    ${renderName}
+    ${renderGithub}
+    ${renderEmail}
+    `
+    console.log(renderQuestionSection);
+  }
+
+  return renderQuestionSection;
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   var renderDesc;
@@ -119,6 +145,8 @@ ${data.projTest}
     renderTest = ''
   };
 
+  //Generate Questions section
+
 
   return `# ${data.projTitle}
 ${renderLicenseBadge(data.projLicense)}
@@ -129,6 +157,7 @@ ${renderUsag}
 ${renderGuides}
 ${renderTest}
 ${renderLicenseSection(data.projLicense)}
+${questionsSection(data.projYourName, data.projGit, data.projEmail)}
 `;
 }
 

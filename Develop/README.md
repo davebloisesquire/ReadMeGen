@@ -1,5 +1,5 @@
-# Read ME Gen
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+# Dave
+
 ## Table of contents
 
  [Description](./#description)
@@ -10,21 +10,26 @@
 
  [Contribution Guidelines](./#contribution-guidelines)
 
- [License](./#license)
+ [Testing Instructions](./#testing-instructions)
 ## Description
-This generates a read me markdown file based on answers to prompts
+desc
 
 ## Installation Instructions
-"npm i" to install dependancies.
+inst
 
 ## Usage Instructions
-Run "node index.js" and answer the prompts.
+use
 
 ## Contribution Guidelines
-No contributions. But feel free to fork and make whatever cahnges you want.
+cont
 
 
-## License
-This project is licensed under GNU. For more information on this license follow the link below.
-https://www.gnu.org/licenses/gpl-3.0
+## Testing Instructions
+test
+
+
+## Questions
+    My name is dave.
+    My github is [git](https://github.com/git).
+    You can email me at [email](mailto:email).
     
