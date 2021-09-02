@@ -2,15 +2,15 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ## Table of contents
 
- [Description](./#description)
+ [Description](#description)
 
- [Installation Instructions](./#installation-instructions)
+ [Installation Instructions](#installation-instructions)
 
- [Usage Instructions](./#usage-instructions)
+ [Usage Instructions](#usage-instructions)
 
- [Contribution Guidelines](./#contribution-guidelines)
+ [Contribution Guidelines](#contribution-guidelines)
 
- [License](./#license)
+ [License](#license)
 ## Description
 This is a read me generator. Who needs to spend all that time writing a read me when you can just use a command line interface to write one.
 There is also a sample readme in the Develop folder.
