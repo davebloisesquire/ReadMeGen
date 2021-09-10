@@ -49,22 +49,22 @@ function tableOfContentsGenerator(data) {
     tableOfContents += "\r\n\r\n [Description](./#description)"
   }
   if (data.projInst !== '') {
-    tableOfContents += "\r\n\r\n [Installation Instructions](./#installation-instructions)"
+    tableOfContents += "\r\n\r\n [Installation Instructions](#installation-instructions)"
   }
   if (data.projUsag !== '') {
-    tableOfContents += "\r\n\r\n [Usage Instructions](./#usage-instructions)"
+    tableOfContents += "\r\n\r\n [Usage Instructions](#usage-instructions)"
   }
   if (data.projGuides !== '') {
-    tableOfContents += "\r\n\r\n [Contribution Guidelines](./#contribution-guidelines)"
+    tableOfContents += "\r\n\r\n [Contribution Guidelines](#contribution-guidelines)"
   }
   if (data.projTest !== '') {
-    tableOfContents += "\r\n\r\n [Testing Instructions](./#testing-instructions)"
+    tableOfContents += "\r\n\r\n [Testing Instructions](#testing-instructions)"
   }
   if (data.projLicense !== 'None') {
-    tableOfContents += "\r\n\r\n [License](./#license)"
+    tableOfContents += "\r\n\r\n [License](#license)"
   }
   if (!(data.name === '' && data.github === '' && data.email === '')) {
-    tableOfContents += "\r\n\r\n [Questions](./#questions)"
+    tableOfContents += "\r\n\r\n [Questions](#questions)"
   }
   return tableOfContents;
 }
